@@ -1,0 +1,28 @@
+{
+  "name": "gruntasks",
+  "version": "1.0.0",
+  "description": "Proyecto donde utilizare para probar Grunt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohatiro/gruntasks.git"
+  },
+  "keywords": [
+    "grunt",
+    "tasks",
+    "tests"
+  ],
+  "author": "rohatiro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohatiro/gruntasks/issues"
+  },
+  "homepage": "https://github.com/rohatiro/gruntasks#readme",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
