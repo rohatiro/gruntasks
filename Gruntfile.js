@@ -36,4 +36,15 @@ module.exports = function(grunt) {
             done();
         },10000);
     });
+
+    //Required Tasks
+    //In this example this task need that the task "async" run before this otherwise it will rise a exception
+    //If we run this task in the console alone it always rise a exception because we need the task run in the same instance
+    grunt.registerTask("req", "tarea que requiere de otra tarea", function() {
+        grunt.task.requires("async");
+        grunt.log.writeln("La tarea termino sin errores");
+    });
+
+    //Here we define the execution of the 2 previous tasks in one task to see we how it works the required tasks
+    grunt.registerTask("reqasync", ["async", "req"]);
 };
