@@ -25,4 +25,15 @@ module.exports = function(grunt) {
     grunt.registerMultiTask("multi", "ejecución de varias tareas", function() {
         grunt.log.writeln(this.target + ": " + this.data);
     });
+
+    //Async Task
+    grunt.registerTask("async", "tarea asincrona de prueba", function() {
+        //with this line we tell the task to not end until we say it
+        var done = this.async();
+        grunt.log.writeln("Empezando prueba");
+        setTimeout(function() {
+            grunt.log.writeln("Terminando prueba");
+            done();
+        },10000);
+    });
 };
